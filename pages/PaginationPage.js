@@ -1,12 +1,12 @@
 class PaginationPage {
     constructor(page) {
         this.page = page;
-        this.paginationHeading = page.locator('h1:has-text("Pagination")');
-        this.worldCityPopulationsHeading = page.locator('h2:has-text("World City Populations 2022")');
+        this.paginationHeading = page.locator('.is-size-3');
+        this.worldCityPopulationsHeading = page.locator('#sub_heading');
         this.paragraph = page.locator('p:has-text("What are the most populated cities in the world?")');
-        this.previousButton = page.locator('button:has-text("Previous")');
-        this.nextButton = page.locator('button:has-text("Next")');
-        this.cityInfo = page.locator('.city-info');
+        this.previousButton = page.locator('#previous');
+        this.nextButton = page.locator('#next');
+        this.cityInfo = page.locator('.city_info');
     }
 
     async navigate() {
